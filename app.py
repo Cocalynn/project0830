@@ -127,23 +127,9 @@ for row in number_gris:
  """
 
 # translator
-"""
-def translate(phrase):
-    translation = ""
-    for letter in phrase:  # "Out"
-        if letter in "AEIOUaeiou":  # letter.lower(): lower all the letter in the string. here change Out to out
-            # here i can also change it into: if letter.upper() in "AEIOU"
-            # or i can also change it into: if letter in "AEIOUaeiou"
 
-            if letter.isupper():  # if letter is uppercase
-                translation = translation + "G"
-            else:
-                translation = translation + "g"
-        else:
-            translation = translation + letter
-    return translation
-print(translate(input("Enter a phrase")))
-"""
+
+
 
 # except
 
@@ -185,7 +171,7 @@ student2 = student("alex", "math", "3.5")
 print(student1.name)
 """
 
-"""
+
 from question import question  # take the class question from the file question
 
 question_prompts = [
@@ -209,7 +195,7 @@ def run_test(questions):
 
 
 run_test(questions)
-"""
+
 
 """
 in a class file, you can inherit another class
@@ -217,3 +203,20 @@ from chef import chef
 class chinesechef(chef):
 # in this way chinesechef inherited all functions in chef
 """
+
+
+def translate(phrase):
+    translation = ""
+    for letter in phrase:  # "Out"
+        if letter in "AEIOUaeiou":  # letter.lower(): lower all the letter in the string. here change Out to out
+            # here i can also change it into: if letter.upper() in "AEIOU"
+            # or i can also change it into: if letter in "AEIOUaeiou"
+
+            if letter.isupper():  # if letter is uppercase
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+print(translate(input("Enter a phrase")))
